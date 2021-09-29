@@ -18,18 +18,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-LES VOY A MANDAR ESTOS ARCHIVOS
+
 
 Route::apiResource('proyectos', ProyectoController::class);
-// LO DE ARRIBA REEMPLAZA TODO LO DE ABAJO DESDE QUE TENGA ESTO NOMBRES
 // Route::post('proyectos', [ProyectoController::class, 'store']);
 // Route::get('proyectos', [ProyectoController::class, 'index']);
 // Route::get('proyectos/{nombre}', [ProyectoController::class, 'show']);
 // Route::delete('proyectos/{nombre}', [ProyectoController::class, 'destroy']);
 
-Route::post('empleados', [EmpleadoController::class, 'store']);
+Route::apiResource('empleados', EmpleadoController::class);
+//Route::post('empleados', [EmpleadoController::class, 'store']);
+//Route::get('empleados', [EmpleadoController::class, 'index']);
+//Route::get('empleados/{iden}', [EmpleadoController::class, 'show']);
+//Route::delete('empleados/{iden}', [EmpleadoController::class, 'destroy']);
+
 
 Route::post('tareas', [TareaController::class, 'store']);
 
-Route::post('documentos', [DocumentoController::class, 'store']);
 
+Route::apiResource('documentos', DocumentoController::class);
+//Route::post('documentos', [DocumentoController::class, 'store']);
+//Route::get('documentos', [DocumentoController::class, 'index']);
+//Route::get('documentos/{cod}', [DocumentoController::class, 'show']);
+//Route::delete('documentos/{cod}', [DocumentoController::class, 'destroy']);
