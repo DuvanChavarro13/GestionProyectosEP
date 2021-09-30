@@ -18,18 +18,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-LES VOY A MANDAR ESTOS ARCHIVOS
-
+// RUTAS DE PROYECTOS
 Route::apiResource('proyectos', ProyectoController::class);
 // LO DE ARRIBA REEMPLAZA TODO LO DE ABAJO DESDE QUE TENGA ESTO NOMBRES
-// Route::post('proyectos', [ProyectoController::class, 'store']);
+// Route::post('proyectos', [ProyectoController::class, 'create']);
 // Route::get('proyectos', [ProyectoController::class, 'index']);
 // Route::get('proyectos/{nombre}', [ProyectoController::class, 'show']);
 // Route::delete('proyectos/{nombre}', [ProyectoController::class, 'destroy']);
 
-Route::post('empleados', [EmpleadoController::class, 'store']);
 
-Route::post('tareas', [TareaController::class, 'store']);
+// RUTAS DE EMPLEADOS
+Route::apiResource('empleados', EmpleadoController::class);
+//Route::post('empleados', [EmpleadoController::class, 'store']);
 
+
+// RUTAS DE LAS TAREAS
+Route::apiResource('tareas', TareaController::class);
+// Route::post('tareas', [TareaController::class, 'store']);
+// Route::get('tareas', [TareaController::class, 'index']);
+// Route::get('tareas/{nombre}', [TareaController::class, 'show']);
+// Route::delete('tareas/{nombre}', [TareaController::class, 'destroy']);
+
+
+// RUTAS DE LOS DOCUMENTOS
 Route::post('documentos', [DocumentoController::class, 'store']);
 

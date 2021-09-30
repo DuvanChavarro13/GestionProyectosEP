@@ -24,9 +24,8 @@ class ProyectoController extends Controller
     //crea el proyecto
     public function store(Request $request)
     {
-
         $validacion = Validator::make($request->all(),[
-            'nombre_clave'    => 'required|string|max:100',
+            'nombre_clave'    => 'required|unique:true|string|max:100',
             'denominacion_comercial'  => 'required|string|max:20',
             'fecha_inicio'     => 'required|date',
             'fecha_finalizacion' => 'required|date',
@@ -44,6 +43,11 @@ class ProyectoController extends Controller
         $proyecto-> fecha_inicio = $request->fecha_inicio;
         $proyecto->fecha_finalizacion = $request->fecha_finalizacion;
         $proyecto->estado = boolval($request->estado);
+
+        // $nombre_repetido = Proyecto::get('nombre_clave');
+        // if($nombre_repetido == $request->nombre_clave){
+        //     return response(['errors' => $nombre_repetido->errors()], 422);
+        // }
 
         $proyecto->save();
 
