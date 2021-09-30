@@ -18,14 +18,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 // RUTAS DE PROYECTOS
 Route::apiResource('proyectos', ProyectoController::class);
 // LO DE ARRIBA REEMPLAZA TODO LO DE ABAJO DESDE QUE TENGA ESTO NOMBRES
 // Route::post('proyectos', [ProyectoController::class, 'create']);
+=======
+
+
+Route::apiResource('proyectos', ProyectoController::class);
+// Route::post('proyectos', [ProyectoController::class, 'store']);
+>>>>>>> 2058ef30a4de611aa464ae7d479f4cb990f95c95
 // Route::get('proyectos', [ProyectoController::class, 'index']);
 // Route::get('proyectos/{nombre}', [ProyectoController::class, 'show']);
 // Route::delete('proyectos/{nombre}', [ProyectoController::class, 'destroy']);
 
+<<<<<<< HEAD
+=======
+Route::apiResource('empleados', EmpleadoController::class);
+//Route::post('empleados', [EmpleadoController::class, 'store']);
+//Route::get('empleados', [EmpleadoController::class, 'index']);
+//Route::get('empleados/{iden}', [EmpleadoController::class, 'show']);
+//Route::delete('empleados/{iden}', [EmpleadoController::class, 'destroy']);
+
+>>>>>>> 2058ef30a4de611aa464ae7d479f4cb990f95c95
 
 // RUTAS DE EMPLEADOS
 Route::apiResource('empleados', EmpleadoController::class);
@@ -40,6 +56,14 @@ Route::apiResource('tareas', TareaController::class);
 // Route::delete('tareas/{nombre}', [TareaController::class, 'destroy']);
 
 
+<<<<<<< HEAD
 // RUTAS DE LOS DOCUMENTOS
 Route::post('documentos', [DocumentoController::class, 'store']);
+=======
+>>>>>>> 2058ef30a4de611aa464ae7d479f4cb990f95c95
 
+Route::apiResource('documentos', DocumentoController::class);
+//Route::post('documentos', [DocumentoController::class, 'store']);
+//Route::get('documentos', [DocumentoController::class, 'index']);
+//Route::get('documentos/{cod}', [DocumentoController::class, 'show']);
+//Route::delete('documentos/{cod}', [DocumentoController::class, 'destroy']);
